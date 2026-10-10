@@ -1,0 +1,21 @@
+#첨에푼거 
+def solution(participant, completion):
+    answer = ""
+    
+    for name in participant:
+        if participant.count(name) > completion.count(name):
+            answer = name
+            break
+    
+    return answer
+
+#두번째로푼거
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
+
+    return participant[-1]
