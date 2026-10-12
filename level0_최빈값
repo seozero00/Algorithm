@@ -1,0 +1,28 @@
+#첨에푼거 
+def solution(array):
+    answer = 0
+    count = 0
+
+    for i in array:
+        if array.count(i) > count:
+            count = array.count(i)
+            answer = i
+        elif array.count(i) == count:
+            answer = -1
+
+    return answer
+
+#두번째
+def solution(array):
+    answer = 0
+    count = [0] * (max(array)+1)
+    
+    for i in array:
+        count[i] += 1
+        
+    if count.count(max(count)) > 1:
+        answer = -1
+    else: 
+        answer = count.index(max(count))
+    
+    return answer
