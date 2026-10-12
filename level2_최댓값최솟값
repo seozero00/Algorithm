@@ -1,0 +1,12 @@
+def solution(s):
+    answer = ''
+    
+    nums = s.split()
+    nums = list(map(int, nums))
+    
+    min_s = min(nums)
+    max_s  = max(nums)
+    
+    answer = str(min_s) + " " + str(max_s)
+    
+    return answer
